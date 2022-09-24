@@ -21,7 +21,7 @@ export default class App extends Component {
   render() {
 
     return (
-      <div>
+      <>
         <Router>
           <NavBar />
           <LoadingBar
@@ -33,8 +33,9 @@ export default class App extends Component {
           <Routes>
             <Route exact path="/" element={<News setProgress={this.setProgress} key="general" pageSize={this.pageSize} country="in" category="general" />}>
             </Route>
-            {/* <Route exact path="/blog-be" element={<News setProgress={this.setProgress} key="general" pageSize={this.pageSize} country="in" category="general" />}>
-            </Route> */}
+
+            <Route  exact path="/blog-be" element={<News setProgress={this.setProgress} key="general" pageSize={this.pageSize} country="in" category="general" />}>
+            </Route>
             <Route exact path="/home" element={<News setProgress={this.setProgress} key="general" pageSize={this.pageSize} country="in" category="general" />}>
             </Route>
             <Route exact path="/business" element={<News setProgress={this.setProgress} key="business" pageSize={this.pageSize} country="in" category="business" />}>
@@ -53,7 +54,7 @@ export default class App extends Component {
 
         </Router>
 
-      </div>
+      </>
     )
   }
 }

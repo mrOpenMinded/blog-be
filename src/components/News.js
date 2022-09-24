@@ -376,7 +376,8 @@ export class News extends Component {
         return (
             <>
                 {/* // <div className="container my-3"> */}
-                <h2 className="text-center my-3">NewsMonkey---Top {this.capitalizeFirstLetter(this.props.category)} HeadLines</h2>
+
+                <h2 className="text-center " style={{marginTop:"70px"}} >NewsMonkey---Top {this.capitalizeFirstLetter(this.props.category)} HeadLines</h2>
                 {this.state.loading && <Spinner />}
                 <InfiniteScroll
                     dataLength={this.state.articles.length}
@@ -384,7 +385,7 @@ export class News extends Component {
                     hasMore={this.state.articles.length < this.state.totalResults}
                     loader={<Spinner />}
                 >
-                    <div className="container my-3">
+                    <div className="container my-5">
                         <div className="row">
                             {/* !this.state.loading && */}
                             {this.state.articles.map((ele) => {
